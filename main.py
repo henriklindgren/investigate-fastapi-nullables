@@ -54,3 +54,11 @@ def variant31(variant31: Variant31 = Depends()):
 @app.get('/variant32')
 def variant32(variant32: Variant32 = Depends()):
     pass
+
+
+@app.get(
+    '/variant32/sub',
+    dependencies=[Depends(variant32)],
+)
+def variant32_subdependency():
+    pass
