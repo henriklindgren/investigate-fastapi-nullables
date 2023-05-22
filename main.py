@@ -56,6 +56,11 @@ def variant32(variant32: Variant32 = Depends()):
     pass
 
 
+@app.get('/optional-variant32')
+def optional_variant32(variant32: Optional[Variant32] = Depends()):
+    pass
+
+
 @app.get(
     '/variant32/sub',
     dependencies=[Depends(variant32)],

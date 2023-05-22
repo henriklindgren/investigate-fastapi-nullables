@@ -65,3 +65,15 @@ def test_variants(client):
     variant32_field3 = r_json['paths']['/variant32/sub']['get']['parameters'][0]
     assert variant32_field3['name'], 'field3'
     assert variant32_field3['schema'].get('nullable', _NOT_SET) is True
+
+    variant32_field1 = r_json['paths']['/optional-variant32']['get']['parameters'][0]
+    assert variant32_field1['name'], 'field1'
+    assert variant32_field1['schema'].get('nullable', _NOT_SET) is _NOT_SET
+
+    variant32_field2 = r_json['paths']['/optional-variant32']['get']['parameters'][0]
+    assert variant32_field2['name'], 'field2'
+    assert variant32_field2['schema'].get('nullable', _NOT_SET) is _NOT_SET
+
+    variant32_field3 = r_json['paths']['/optional-variant32']['get']['parameters'][0]
+    assert variant32_field3['name'], 'field3'
+    assert variant32_field3['schema'].get('nullable', _NOT_SET) is _NOT_SET
