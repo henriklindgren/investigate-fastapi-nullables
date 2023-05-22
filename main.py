@@ -42,22 +42,22 @@ class Variant32(object):
 
 
 @app.get('/variant30')
-def variant30(variant30: Variant30 = Depends()):
+def variant30(_variant30: Variant30 = Depends()):
     pass
 
 
 @app.get('/variant31')
-def variant31(variant31: Variant31 = Depends()):
+def variant31(_variant31: Variant31 = Depends()):
     pass
 
 
 @app.get('/variant32')
-def variant32(variant32: Variant32 = Depends()):
+def variant32(_variant32: Variant32 = Depends()):
     pass
 
 
 @app.get('/optional-variant32')
-def optional_variant32(variant32: Optional[Variant32] = Depends()):
+def optional_variant32(_variant32: Optional[Variant32] = Depends()):
     pass
 
 
